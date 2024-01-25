@@ -47,7 +47,7 @@ button {
     width: 200px;
     height: 55px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 div {
@@ -64,4 +64,35 @@ label {
     left: 4%;
     padding: 0px 8px;
     cursor: pointer;
+}
+
+.error-text {
+    color: rgb(212, 16, 16);
+    font-size: 20px;
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}
+
+.password-check {
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    width: 240px;
+    margin-left: -120px;
+    color: red;
+    font-size: 19px;
+    font-weight: 600;
+    background-color: whitesmoke;
+    border: 1.5px solid lightslategray;
+    z-index: 100;
+    border-radius: 8px;
+    padding: 3px 20px;
+    visibility: hidden;
+}
+
+.show-pass {
+    visibility: visible;
 }
