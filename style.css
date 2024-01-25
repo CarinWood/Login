@@ -48,6 +48,7 @@ button {
     height: 55px;
     cursor: pointer;
     margin-top: 5px;
+    visibility: hidden;
 }
 
 div {
@@ -72,10 +73,6 @@ label {
     visibility: hidden;
 }
 
-.show {
-    visibility: visible;
-}
-
 .password-check {
     position: absolute;
     top: -150%;
@@ -93,6 +90,6 @@ label {
     visibility: hidden;
 }
 
-.show-pass {
+.show {
     visibility: visible;
 }

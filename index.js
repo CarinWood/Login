@@ -10,6 +10,7 @@ let confirmInput = document.querySelector('.confirm-input')
 let confirmLabel = document.querySelector('.confirm-label')
 let errorText = document.querySelector('.error-text')
 let passwordCheck = document.querySelector('.password-check')
+let button = document.querySelector('.submit-btn')
 const name = ''
 const username = ''
 const email = ''
@@ -32,11 +33,22 @@ makeLabelClickable(confirmLabel, confirmInput)
 
 passwordInput.addEventListener('input', function() {
     if (passwordInput.value.length > 0 && passwordInput.value.length < 8) {
-        passwordCheck.classList.add('show-pass');
+        passwordCheck.classList.add('show');
+        errorText.classList.remove('show')
+
     } else {
-        passwordCheck.classList.remove('show-pass');
+        passwordCheck.classList.remove('show');
     }
 });
+
+confirmInput.addEventListener('input', function() {
+    if(passwordInput.value.length >= 8 && confirmInput.value.length >= 8) {
+        errorText.classList.remove('show')
+        button.classList.add('show')
+    } else {
+        button.classList.remove('show')
+    }
+})
 
 //submit the form 
 
@@ -56,6 +68,7 @@ submitBtn.addEventListener('click', function(e) {
             errorText.classList.add('show')
             passwordInput.value=''
             confirmInput.value=''
+            button.classList.remove('show')
         }
         
     } else {
